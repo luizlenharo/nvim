@@ -6,6 +6,7 @@ vim.g.maplocalleader = ' '
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 vim.keymap.set('i', 'jk', '<Esc>', { noremap = true, silent = true })
+
 -- For conciseness
 local opts = { noremap = true, silent = true }
 
