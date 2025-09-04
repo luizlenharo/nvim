@@ -31,6 +31,7 @@ require('lazy').setup {
   require 'plugins.misc',
   require 'plugins.comment',
   require 'plugins.nvim-java',
+  require 'plugins.smear-cursor',
 }
 
 require('java').setup()
