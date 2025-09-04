@@ -1,28 +1,30 @@
 return {
-  'shaunsingh/nord.nvim',
-  lazy = false,
-  priority = 1000,
-  config = function()
-    -- Example config in lua
-    vim.g.nord_contrast = true
-    vim.g.nord_borders = false
-    vim.g.nord_disable_background = true
-    vim.g.nord_italic = false
-    vim.g.nord_uniform_diff_background = true
-    vim.g.nord_bold = false
+  {
+    'rebelot/kanagawa.nvim',
+    name = 'kanagawa',
+    lazy = false, -- load at startup
+    priority = 1000, -- ensure it loads before other plugins
+    config = function()
+      require('kanagawa').setup {
+        compile = false, -- enable compiling for performance (optional)
+        undercurl = true,
+        commentStyle = { italic = true },
+        functionStyle = {},
+        keywordStyle = { italic = true },
+        statementStyle = { bold = true },
+        typeStyle = {},
+        transparent = false, -- set true if you want transparent background
+        dimInactive = false,
+        terminalColors = true,
+        theme = 'wave', -- "wave", "dragon", or "lotus"
+        background = { -- map background to theme
+          dark = 'wave',
+          light = 'lotus',
+        },
+      }
 
-    -- Load the colorscheme
-    require('nord').set()
-
-    -- Toggle background transparency
-    local bg_transparent = true
-
-    local toggle_transparency = function()
-      bg_transparent = not bg_transparent
-      vim.g.nord_disable_background = bg_transparent
-      vim.cmd [[colorscheme nord]]
-    end
-
-    vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
-  end,
+      -- load the colorscheme
+      vim.cmd 'colorscheme kanagawa'
+    end,
+  },
 }
