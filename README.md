@@ -2,14 +2,6 @@
 
 Welcome to my Neovim configuration repository! This repository contains my personal configurations and plugins for Nvim.
 
-## Prerequisites
-
-Before you start installing these configurations, ensure you have the following:
-
-- **Neovim** installed on your system. You can download it from the [official website](https://neovim.io/) or via package managers like `apt`, `brew`, or `pacman`.
-- **Git** for cloning this repository.
-- **Curl/Wget** for downloading additional resources, if needed.
-
 ## Installation
 
 Follow these steps to install and set up the configurations from scratch:
