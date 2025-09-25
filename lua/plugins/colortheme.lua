@@ -13,7 +13,7 @@ return {
         keywordStyle = { italic = true },
         statementStyle = { bold = true },
         typeStyle = {},
-        transparent = false, -- set true if you want transparent background
+        transparent = true, -- set true if you want transparent background
         dimInactive = false,
         terminalColors = true,
         theme = 'wave', -- "wave", "dragon", or "lotus"
