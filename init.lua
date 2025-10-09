@@ -32,6 +32,7 @@ require('lazy').setup {
   require 'plugins.comment',
   require 'plugins.nvim-java',
   require 'plugins.smear-cursor',
+  require 'plugins.render-markdown',
 }
 
 require('java').setup()
